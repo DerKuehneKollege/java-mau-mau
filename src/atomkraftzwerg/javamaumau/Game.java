@@ -107,7 +107,7 @@ public class Game {
         Log.itIsNowTurnOf(activePlayer, roundCounter);
         Log.topmostCardIs(topmostCard);
 
-        System.out.println(topmostCard.graphic());
+        System.out.println(CardPrinter.printCard(topmostCard));
 
         if (DEBUG || activePlayer == humanPlayer) {
             Log.playersCardsAre(activePlayer);
@@ -150,7 +150,9 @@ public class Game {
             output.append("\n");
 
             do {
-                System.out.println(output.toString());
+//                System.out.println(output.toString());
+
+                System.out.println(CardPrinter.printCardMap(cardSelection));
 
                 String input = ConsoleHelper.readLine("Please select the card you want to place by the numbers above: ").trim();
 

@@ -30,6 +30,9 @@ class Log {
         CardStack hand = player.getHand();
 
         System.out.println("Player " + player.getName() + " has " + hand.size() + " cards which are: " + hand);
+
+        System.out.println();
+        System.out.println(CardPrinter.printCardList(hand.getCards()));
     }
 
     static void itIsNowTurnOf(Player activePlayer, int roundCounter) {

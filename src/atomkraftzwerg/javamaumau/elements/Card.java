@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Card {
-    private static final Map<CardColors, String> cardColorSigns;
+    public static final Map<CardColors, String> cardColorSigns;
     static
     {
         cardColorSigns = new HashMap<>();
@@ -14,7 +14,7 @@ public class Card {
         cardColorSigns.put(CardColors.Spade,   "♠");
     }
 
-    private static final Map<CardValues, String> cardValueSigns;
+    public static final Map<CardValues, String> cardValueSigns;
     static
     {
         cardValueSigns = new HashMap<>();
@@ -61,34 +61,15 @@ public class Card {
         return "[" + this.color.name() + " " + this.value.name() + "]";
     }
 
-    public String graphic() {
-        String colorSign = cardColorSigns.get(this.color);
-        String valueSign = cardValueSigns.get(this.value);
-        String space = valueSign.length() > 1 ? "" : " ";
-
-        StringBuilder builder = new StringBuilder(7 * 12);
-        builder.append("┌─────────┐\n");
-        builder.append("│ ").append(valueSign).append(space).append("      │\n");
-        builder.append("│         │\n");
-        builder.append("│    ").append(colorSign).append("    │\n");
-        builder.append("│         │\n");
-        builder.append("│      ").append(space).append(valueSign).append(" │\n");
-        builder.append("└─────────┘\n");
-
-        return builder.toString();
-    }
-
-    public String hiddenCard() {
-        return "┌─────────┐\n"
-             + "│░░░░░░░░░│\n"
-             + "│░░░░░░░░░│\n"
-             + "│░░░░░░░░░│\n"
-             + "│░░░░░░░░░│\n"
-             + "│░░░░░░░░░│\n"
-             + "└─────────┘\n";
-    }
-
     public boolean matches(Card other) {
         return this.value == other.value || this.color == other.color;
+    }
+
+    public CardColors getColor() {
+        return color;
+    }
+
+    public CardValues getValue() {
+        return value;
     }
 }

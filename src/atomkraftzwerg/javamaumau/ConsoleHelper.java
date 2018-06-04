@@ -6,10 +6,10 @@ import java.io.InputStreamReader;
 
 public class ConsoleHelper {
 
-    public static String readLine() {
+    public static String readLine(String prefix) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.print("Enter something: ");
+        System.out.print(prefix);
 
         try {
             return br.readLine();

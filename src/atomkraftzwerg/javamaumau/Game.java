@@ -107,6 +107,8 @@ public class Game {
         Log.itIsNowTurnOf(activePlayer, roundCounter);
         Log.topmostCardIs(topmostCard);
 
+        System.out.println(topmostCard.graphic());
+
         if (DEBUG || activePlayer == humanPlayer) {
             Log.playersCardsAre(activePlayer);
         }
@@ -136,7 +138,7 @@ public class Game {
             int handSize = hand.size();
             Map<String, Card> cardSelection = new HashMap<>();
 
-            StringBuilder output = new StringBuilder("Please select: ");
+            StringBuilder output = new StringBuilder("Your cards: ");
 
             for (int cardNr = 1; cardNr <= handSize; cardNr++) {
                 Card currCard = hand.get(cardNr - 1);
@@ -150,7 +152,7 @@ public class Game {
             do {
                 System.out.println(output.toString());
 
-                String input = ConsoleHelper.readLine().trim();
+                String input = ConsoleHelper.readLine("Please select the card you want to place by the numbers above: ").trim();
 
                 if (!cardSelection.containsKey(input)) {
                     System.out.println("Invalid input, please try again!");
@@ -184,7 +186,7 @@ public class Game {
         Log.noMatchingCardFound(topmostCard);
 
         if (activePlayerIsHuman()) {
-            ConsoleHelper.readLine();
+            ConsoleHelper.readLine("Please press Return to continue...");
         }
 
         // no matching card was found, player has to pick one

@@ -61,6 +61,33 @@ public class Card {
         return "[" + this.color.name() + " " + this.value.name() + "]";
     }
 
+    public String graphic() {
+        String colorSign = cardColorSigns.get(this.color);
+        String valueSign = cardValueSigns.get(this.value);
+        String space = valueSign.length() > 1 ? "" : " ";
+
+        StringBuilder builder = new StringBuilder(7 * 12);
+        builder.append("┌─────────┐\n");
+        builder.append("│ ").append(valueSign).append(space).append("      │\n");
+        builder.append("│         │\n");
+        builder.append("│    ").append(colorSign).append("    │\n");
+        builder.append("│         │\n");
+        builder.append("│      ").append(space).append(valueSign).append(" │\n");
+        builder.append("└─────────┘\n");
+
+        return builder.toString();
+    }
+
+    public String hiddenCard() {
+        return "┌─────────┐\n"
+             + "│░░░░░░░░░│\n"
+             + "│░░░░░░░░░│\n"
+             + "│░░░░░░░░░│\n"
+             + "│░░░░░░░░░│\n"
+             + "│░░░░░░░░░│\n"
+             + "└─────────┘\n";
+    }
+
     public boolean matches(Card other) {
         return this.value == other.value || this.color == other.color;
     }

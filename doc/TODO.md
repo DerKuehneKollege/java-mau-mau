@@ -1,5 +1,8 @@
 # TODO
 
+## Improvements
+
+## New features
 - Let the player enter his name
 - Let the player select how many initial cards
 - Rules: Pick 2 cards when card value 7 is played

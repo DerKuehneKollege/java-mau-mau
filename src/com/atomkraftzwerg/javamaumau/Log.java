@@ -1,8 +1,8 @@
-package atomkraftzwerg.javamaumau;
+package com.atomkraftzwerg.javamaumau;
 
-import atomkraftzwerg.javamaumau.elements.Card;
-import atomkraftzwerg.javamaumau.elements.CardStack;
-import atomkraftzwerg.javamaumau.elements.Player;
+import com.atomkraftzwerg.javamaumau.elements.Card;
+import com.atomkraftzwerg.javamaumau.elements.CardStack;
+import com.atomkraftzwerg.javamaumau.elements.Player;
 
 class Log {
 

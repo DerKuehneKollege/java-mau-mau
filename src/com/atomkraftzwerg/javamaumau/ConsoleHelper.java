@@ -1,4 +1,4 @@
-package atomkraftzwerg.javamaumau;
+package com.atomkraftzwerg.javamaumau;
 
 import java.io.BufferedReader;
 import java.io.IOException;

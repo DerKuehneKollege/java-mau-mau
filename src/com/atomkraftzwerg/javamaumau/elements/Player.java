@@ -1,4 +1,4 @@
-package atomkraftzwerg.javamaumau.elements;
+package com.atomkraftzwerg.javamaumau.elements;
 
 public class Player {
     private String name;

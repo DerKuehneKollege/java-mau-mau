@@ -1,10 +1,8 @@
-package atomkraftzwerg.javamaumau;
+package com.atomkraftzwerg.javamaumau;
 
-import atomkraftzwerg.javamaumau.elements.Card;
-import org.jetbrains.annotations.NotNull;
+import com.atomkraftzwerg.javamaumau.elements.Card;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 public class CardPrinter {
@@ -33,7 +31,7 @@ public class CardPrinter {
              + "└─────────┘\n";
     }
 
-    public static String printCardList(@NotNull Collection<Card> cards) {
+    public static String printCardList(Collection<Card> cards) {
         StringBuilder sb = new StringBuilder();
 
         StringBuilder row1 = new StringBuilder();
@@ -68,7 +66,7 @@ public class CardPrinter {
                 .append(row7).append("\n").toString();
     }
 
-    public static String printCardMap(@NotNull Map<String, Card> cardsMap) {
+    public static String printCardMap(Map<String, Card> cardsMap) {
         StringBuilder result = new StringBuilder(printCardList(cardsMap.values()));
 
         for (String key : cardsMap.keySet()) {

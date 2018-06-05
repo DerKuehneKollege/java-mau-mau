@@ -1,7 +1,7 @@
-package atomkraftzwerg.javamaumau;
+package com.atomkraftzwerg.javamaumau;
 
-public class Main {
-
+public class App 
+{
     public static void main(String[] args) {
         Game game = new Game();
 
@@ -11,5 +11,4 @@ public class Main {
 
         game.start();
     }
-
 }

@@ -10,3 +10,4 @@
 - Rules: Player can select the card color when card value J is played
 - Let the player decide whether he wants to skip a round voluntarily
 - Give hints which cards can be placed (or if no cards can be placed)
+- Small delays between actions (deactivated in Debug mode)

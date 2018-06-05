@@ -29,8 +29,7 @@ class Log {
     static void playersCardsAre(Player player) {
         CardStack hand = player.getHand();
 
-        System.out.println("Player " + player.getName() + " has " + hand.size() + " cards which are: " + hand);
-
+        System.out.println("Player " + player.getName() + " has " + hand.size() + " cards which are:");
         System.out.println();
         System.out.println(CardPrinter.printCardList(hand.getCards()));
     }

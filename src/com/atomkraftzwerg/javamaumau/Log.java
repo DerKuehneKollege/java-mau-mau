@@ -19,7 +19,8 @@ class Log {
     }
 
     static void topmostCardIs(Card card) {
-        System.out.println("Topmost card is " + card + ".");
+        System.out.println("Topmost card is:");
+        System.out.println(CardPrinter.printCard(card));
     }
 
     static void gameBegins() {
@@ -29,7 +30,7 @@ class Log {
     static void playersCardsAre(Player player) {
         CardStack hand = player.getHand();
 
-        System.out.println("Player " + player.getName() + " has " + hand.size() + " cards which are:");
+        System.out.println("[DEBUG] Player " + player.getName() + " has " + hand.size() + " cards which are:");
         System.out.println();
         System.out.println(CardPrinter.printCardList(hand.getCards()));
     }

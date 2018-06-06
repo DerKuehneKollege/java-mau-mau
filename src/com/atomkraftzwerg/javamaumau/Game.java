@@ -95,7 +95,7 @@ public class Game {
                 player.pickCardFrom(talon);
             }
 
-            if (DEBUG || player == humanPlayer) {
+            if (DEBUG && !activePlayerIsHuman()) {
                 Log.playersCardsAre(player);
             }
         }
@@ -107,9 +107,7 @@ public class Game {
         Log.itIsNowTurnOf(activePlayer, roundCounter);
         Log.topmostCardIs(topmostCard);
 
-        System.out.println(CardPrinter.printCard(topmostCard));
-
-        if (DEBUG || activePlayer == humanPlayer) {
+        if (DEBUG && !activePlayerIsHuman()) {
             Log.playersCardsAre(activePlayer);
         }
     }

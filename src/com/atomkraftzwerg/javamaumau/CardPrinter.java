@@ -21,6 +21,24 @@ public class CardPrinter {
                 "└─────────┘\n";
     }
 
+    public static String printCardPlacing(Card fromCard, Card toCard) {
+        String fromColorSign = Card.cardColorSigns.get(fromCard.getColor());
+        String fromValueSign = Card.cardValueSigns.get(fromCard.getValue());
+        String fromSpace = fromValueSign.length() > 1 ? "" : " ";
+
+        String toColorSign = Card.cardColorSigns.get(toCard.getColor());
+        String toValueSign = Card.cardValueSigns.get(toCard.getValue());
+        String toSpace = toValueSign.length() > 1 ? "" : " ";
+
+        return  "┌─────────┐"                                + "     " + "┌─────────┐\n" +
+                "│ " + fromValueSign + fromSpace + "      │" + "     " + "│ " + toValueSign + toSpace + "      │\n" +
+                "│         │"                                + "     " + "│         │\n" +
+                "│    " + fromColorSign + "    │"            + " --> " + "│    " + toColorSign + "    │\n" +
+                "│         │"                                + "     " + "│         │\n" +
+                "│      " + fromSpace + fromValueSign + " │" + "     " + "│      " + toSpace + toValueSign + " │\n" +
+                "└─────────┘"                                + "     " + "└─────────┘\n";
+    }
+
     public String printHiddenCard() {
         return "┌─────────┐\n"
              + "│░░░░░░░░░│\n"

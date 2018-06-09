@@ -102,6 +102,8 @@ public class Game {
     }
 
     private void nextTurn() {
+        sleep();
+
         getNextPlayer();
 
         Log.itIsNowTurnOf(activePlayer, roundCounter);
@@ -109,6 +111,15 @@ public class Game {
 
         if (DEBUG && !activePlayerIsHuman()) {
             Log.playersCardsAre(activePlayer);
+        }
+    }
+
+    private static void sleep() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            // will never happen, as there is no interrupt
+            e.printStackTrace();
         }
     }
 

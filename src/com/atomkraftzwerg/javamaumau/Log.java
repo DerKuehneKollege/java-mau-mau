@@ -53,7 +53,8 @@ class Log {
     }
 
     static void matchingCardFound(Player activePlayer, Card matchingCard, Card topmostCard) {
-        System.out.println("Yay, " + activePlayer.getName() + " card " + matchingCard + " matching to " + topmostCard + " and places it!");
+        System.out.println("Yay, " + activePlayer.getName() + " has a matchin card and places it:");
+        System.out.println(CardPrinter.printCardPlacing(matchingCard, topmostCard));
     }
 
     static void playerWon(Player winningPlayer) {
